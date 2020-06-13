@@ -13,9 +13,9 @@ app.get('/', function (req, res) {
     // res.sendFile('/client/views/index.html', { root: __dirname + '/..' });
 })
 
-// Designates what port the app will listen to for incoming requests
-app.listen(8000, () => { console.log('App listening on port 8000!') });
-
 app.get('/test', function (req, res) {
     res.send(mockAPIResponse);
 });
+
+// Designates what port the app will listen to for incoming requests
+app.listen(8000, () => { console.log('App listening on port 8000!') });
