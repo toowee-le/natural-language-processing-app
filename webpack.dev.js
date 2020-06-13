@@ -4,7 +4,7 @@ const HTMLWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
-    entry: './src/index.js',
+    entry: './src/client/index.js',
     mode: 'development',
     module: {
         rules: [
@@ -14,7 +14,7 @@ module.exports = {
                 loader: "babel-loader"
             },
             {
-                test: '/\.scss$/',
+                test: /\.scss$/,
                 use: ['style-loader', 'css-loader', 'sass-loader']
             }
         ]
