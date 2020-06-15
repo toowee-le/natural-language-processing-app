@@ -2,25 +2,21 @@
 <html lang="en" dir="ltr">
     <head>
         <meta charset="utf-8">
-        <title>Test</title>
+        <title>Natural Language Processing</title>
     </head>
 
     <body>
 
         <header>
-            <div class="">
-                Logo
-            </div>
-            <div class="">
-                navigation
-            </div>
+            <h1 class="site-title">News Article Analysis with NLP</h1>
         </header>
 
         <main>
-            <section>
+            <section class="form-section">
+                <h2>Enter the URL of a webpage containing a news article. The article will be extracted and then use NLP to analyse the content:</h2>
                 <form class="" onsubmit="return Client.handleSubmit(event)">
-                    <input id="name" type="text" name="input" value="" placeholder="Name">
-                    <input type="submit" name="" value="submit" onclick="return Client.handleSubmit(event)" onsubmit="return Client.handleSubmit(event)">
+                    <input id="name" type="text" name="input" value="" placeholder="URL">
+                    <input type="submit" name="submit" value="Analyse Text" onclick="return Client.handleSubmit(event)" onsubmit="return Client.handleSubmit(event)">
                 </form>
             <section>
 
@@ -31,8 +27,7 @@
         </main>
 
         <footer>
-            <p>This is a footer</p>
+            <p>Natural Language Processing App by <a href="https://github.com/toowee-le" target="_blank">Tuyet</a> &copy; 2020</p>
         </footer>
-
     </body>
 </html>

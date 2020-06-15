@@ -1,7 +1,11 @@
+@import 'config';
+
 body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    font-family: $font-stack;
+    background: darken($base-color, 5%);
 }
 
 main {

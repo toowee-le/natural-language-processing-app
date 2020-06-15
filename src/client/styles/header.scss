@@ -1,5 +1,14 @@
+@import 'config';
+
 header {
-    display: flex;
-    justify-content: space-between;
-    padding: 10px 40px;
+    text-align: center;
+    padding: 35px 50px;
+    background: $brand-color;
+    color: $base-color;
+
+    .site-title {
+        font-family: $header;
+        font-weight: 700;
+        font-size: 2rem;
+    }
 }
