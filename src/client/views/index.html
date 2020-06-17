@@ -14,9 +14,9 @@
         <main>
             <section class="form-section">
                 <h2>Enter the URL of a webpage containing a news article. The article will be extracted and then use NLP to analyse the content:</h2>
-                <form class="" onsubmit="return Client.handleSubmit(event)">
+                <form class="" onsubmit="return Client.performNLP(event)">
                     <input type="text" name="input" placeholder="URL" id="url">
-                    <input type="submit" name="submit" value="Analyse Text" id="submit" onclick="return Client.handleSubmit(event)" onsubmit="return Client.handleSubmit(event)">
+                    <input type="submit" name="submit" value="Analyse Text" id="submit" onclick="return Client.performNLP(event)" onsubmit="return Client.performNLP(event)">
                 </form>
             <section>
 

@@ -33,7 +33,26 @@ var nlp = new AYLIENTextAPI({
 });
 
 app.post('/apiCall', (req, res) => {
-    console.log(req);
+    console.log(req.body.urlInput);
+
+    nlp.extract({
+        url: req.body.urlInput,
+        best_image: true
+    }, (error, response) => {
+        res.send(response)
+        if (error === null) {
+            console.log(response);
+        }
+    })
+
+    // nlp.sentiment({
+    //     url: req.body.urlInput
+    // }, (error, response) => {
+    //     res.send(response)
+    //     if (error === null) {
+    //         console.log(response);
+    //     }
+    // })
 });
 
 // Start the server
