@@ -2,14 +2,14 @@ export function performNLP(event) {
     event.preventDefault();
 
     // DOM elements needed
-    let urlInput = document.getElementById('url').value;
-    if (urlInput == "") {
+    let url = document.getElementById('url').value;
+    if (url == "") {
         alert("Please enter a web address");
         return false;
     } else {
-        console.log('Form Submitted')
-        console.log(urlInput);
-        postRequest('http://localhost:8080/apiCall', { urlInput })
+        console.log('::: Form Submitted :::')
+        console.log(url);
+        postRequest('http://localhost:8080/apiCall', { url })
     }
 }
 

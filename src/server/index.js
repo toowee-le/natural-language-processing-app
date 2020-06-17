@@ -33,26 +33,40 @@ var nlp = new AYLIENTextAPI({
 });
 
 app.post('/apiCall', (req, res) => {
-    console.log(req.body.urlInput);
+    // Create an object to store all API data to use on the client
+    const allData = {};
+    allData.url = req.body.url;
 
+    // First Aylien API endpoint to extract the article
     nlp.extract({
-        url: req.body.urlInput,
+        url: req.body.url,
         best_image: true
     }, (error, response) => {
-        res.send(response)
+        // If there are no errors
         if (error === null) {
-            console.log(response);
-        }
-    })
+            allData.writer = response.author;
+            allData.title = response.title;
+            allData.text = response.article.slice(0, 200);
+            allData.img = response.image;
 
-    // nlp.sentiment({
-    //     url: req.body.urlInput
-    // }, (error, response) => {
-    //     res.send(response)
-    //     if (error === null) {
-    //         console.log(response);
-    //     }
-    // })
+            // Second Aylien API endpoint to analyse the sentiment of extracted article
+            if (response.article != "") {
+                nlp.sentiment({
+                    url: allData.url
+                }, (error, response) => {
+                    // If there are no errors
+                    if (error === null) {
+                        allData.polarity = response.polarity;
+                        allData.subjectivity = response.subjectivity;
+                        allData.polarityConfidence = response.polarity_confidence.toFixed(1);
+                        allData.subjectivityConfidence = response.subjectivity_confidence.toFixed(1);
+                        console.log(allData);
+                        res.send(allData);
+                    }
+                })
+            }
+        }
+    });
 });
 
 // Start the server
