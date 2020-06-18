@@ -45,8 +45,8 @@ app.post('/apiCall', (req, res) => {
         // If there are no errors
         if (error === null) {
             allData.writer = response.author;
-            allData.title = response.title;
-            allData.text = response.article.slice(0, 200);
+            allData.headline = response.title;
+            allData.text = response.article.slice(0, 350) + '...';
             allData.img = response.image;
 
             // Second Aylien API endpoint to analyse the sentiment of extracted article
@@ -56,8 +56,8 @@ app.post('/apiCall', (req, res) => {
                 }, (error, response) => {
                     // If there are no errors
                     if (error === null) {
-                        allData.polarity = response.polarity;
-                        allData.subjectivity = response.subjectivity;
+                        allData.polarity = response.polarity.charAt(0).toUpperCase() + response.polarity.slice(1);
+                        allData.subjectivity = response.subjectivity.charAt(0).toUpperCase() + response.subjectivity.slice(1);
                         allData.polarityConfidence = response.polarity_confidence.toFixed(1);
                         allData.subjectivityConfidence = response.subjectivity_confidence.toFixed(1);
                         console.log(allData);
