@@ -13,8 +13,6 @@ const dotenv = require('dotenv');
 
 const app = express();
 
-const mockAPIResponse = require('./mockAPI.js');
-
 app.use(express.static('dist'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
