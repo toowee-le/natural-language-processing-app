@@ -33,6 +33,32 @@ export const postRequest = async (url = '', data = {}) => {
     }
 }
 
-const updateUI = () => {
+const updateUI = (data) => {
     const resultsSection = document.querySelector('.results-section');
+
+    const innerHTML = `
+        <div class="article block">
+            <h3>Article</h3>
+            <img class="article-img" src="${data.img}" alt="News Image">
+            <p class="article-title">${data.headline}</p>
+            <div class="article-info">
+                <p class="article-author">${data.writer}</p>
+                <p class="divider">|</p>
+                <p class="article-date">2015-04-06</p>
+            </div>
+            <p class="article-text">${data.text}</p>
+            <button class="article-link"><a href="${data.url}">Read full article</a></button>
+    </div>
+    <div class="data block">
+        <h3>Results</h3>
+        <div class="title-block">Polarity</div>
+        <p class="polarity">Polarity: <span class="data-value">${data.polarity}</span></p>
+        <p class="polarity-confidence">Confidence: <span class="data-value">${data.polarityConfidence}</span></p>
+        <div class="title-block">Subjectivity</div>
+        <p class="subjectivity">Subjectivity: <span class="data-value">${data.subjectivity}</span></p>
+        <p class="subjectivity-confidence">Confidence: <span class="data-value">${data.subjectivityConfidence}</span></p>
+    </div>
+    `;
+
+    resultsSection.innerHTML = innerHTML;
 }
