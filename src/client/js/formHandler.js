@@ -44,7 +44,7 @@ const updateUI = (data) => {
             <div class="article-info">
                 <p class="article-author">${data.writer}</p>
                 <p class="divider">|</p>
-                <p class="article-date">2015-04-06</p>
+                <p class="article-date">${data.date}</p>
             </div>
             <p class="article-text">${data.text}</p>
             <button class="article-link"><a href="${data.url}">Read full article</a></button>

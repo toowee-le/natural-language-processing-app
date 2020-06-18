@@ -46,6 +46,7 @@ app.post('/apiCall', (req, res) => {
         if (error === null) {
             allData.writer = response.author;
             allData.headline = response.title;
+            allData.date = response.publishDate.slice(0, 10);
             allData.text = response.article.slice(0, 350) + '...';
             allData.img = response.image;
 
