@@ -5,7 +5,8 @@ body {
     flex-direction: column;
     min-height: 100vh;
     font-family: $font-stack;
-    background: darken($base-color, 5%);
+    font-size: 1.3rem;
+    color: $main-brand-color;
 }
 
 main {
@@ -14,5 +15,24 @@ main {
 
 section {
     max-width: 800px;
-    margin: 50px auto;
+    margin: 20px auto;
+}
+
+h2, h3 {
+    text-align: center;
+    padding-bottom: 1em;
+    line-height: 1.5;
+}
+
+h3 {
+    font-weight: 700;
+    font-size: 1.4rem;
+}
+
+hr {
+    width: 150px;
+    height: 5px;
+    margin: 4em auto;
+    background: $main-brand-color;
+    border: none;
 }

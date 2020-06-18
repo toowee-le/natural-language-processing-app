@@ -8,26 +8,57 @@
     <body>
 
         <header>
-            <h1 class="site-title">News Article Analysis with NLP</h1>
+            <h1 class="site-title">Evaluate a News Article with NLP</h1>
         </header>
 
         <main>
+            <section class="intro-section">
+                <img src="/src/client/views/ai.jpg" class="intro-img">
+
+                <div class="overlay-text">
+                    <p>Natural Language Processing (NLP) is a field of AI that gives computers the ability to read, understand and extract meaning from human languages. The Aylien Text Analysis API is a powerful NLP package for analysing various kinds of meaning from textual content. Try it below!</p>
+                </div>
+            </section>
+
+            <hr>
+
             <section class="form-section">
-                <h2>Enter the URL of a webpage containing a news article. The article will be extracted and then use NLP to analyse the content:</h2>
-                <form class="" onsubmit="return Client.performNLP(event)">
+                <h2>Add a URL to a news article to see what insight The Aylien Text NLP has on the author's emotions and perspective:</h2>
+
+                <form onsubmit="return Client.performNLP(event)">
                     <input type="text" name="input" placeholder="URL" id="url">
                     <input type="submit" name="submit" value="Analyse Text" id="submit" onclick="return Client.performNLP(event)" onsubmit="return Client.performNLP(event)">
                 </form>
-            <section>
+            </section>
 
-            <section>
-                <strong>Form Results:</strong>
-                <div id="results"></div>
+            <section class="results-section">
+                <div class="article block">
+                    <h3>Article</h3>
+                    <img class="article-img" src="/src/client/views/image.jpg" alt="News Image">
+                    <p class="article-title">Shoppers rush to the High Street as stores reopen</p>
+                    <div class="article-info">
+                        <p class="article-author">BBC News</p>
+                        <p class="divider">|</p>
+                        <p class="article-date">2015-04-06</p>
+                    </div>
+                    <p class="article-text">Media playback is unsupported on your device Media captionShoppers in England rush back to the High Street Demand across England's High Streets, retail parks and shopping centres surged on Monday as some shops reopened after a three-month lockdown. Research firm Springboard said th...</p>
+                    <button class="article-link"><a href="#">Read full article</a></button>
+                </div>
+                <div class="data block">
+                    <h3>Results</h3>
+                    <div class="title-block">Polarity</div>
+                    <p class="polarity">Polarity: <span class="data-value">0.90</span></p>
+                    <p class="polarity-confidence">Confidence: <span class="data-value">0.90</span></p>
+                    <div class="title-block">Subjectivity</div>
+                    <p class="subjectivity">Subjectivity: <span class="data-value">0.90</span></p>
+                    <p class="subjectivity-confidence">Confidence: <span class="data-value">0.90</span></p>
+                </div>
             </section>
         </main>
 
         <footer>
-            <p>Natural Language Processing App by <a href="https://github.com/toowee-le" target="_blank">Tuyet</a> &copy; 2020</p>
+            <p>Read more about The Aylien Text Analysis NLP API <a href="https://aylien.com/" target="_blank">here</a>.</p>
+            <p>&copy; 2020 <a href="https://github.com/toowee-le" target="_blank">Tuyet Le</a></p>
         </footer>
     </body>
 </html>

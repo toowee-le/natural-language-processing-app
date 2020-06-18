@@ -2,15 +2,19 @@
 
 footer {
     text-align: center;
-    padding: 20px;
-    font-size: .8em;
+    padding: 30px;
+    margin-top: 2em;
+    font-size: .7em;
+    background: $main-brand-color;
+    color: #FFF;
 
     a {
-        color: $brand-color;
+        color: $base-color;
+        font-weight: 700;
         text-decoration: none;
 
         &:hover {
-            font-weight: 700;
+            color: $secondary-brand-color;
         }
     }
 }

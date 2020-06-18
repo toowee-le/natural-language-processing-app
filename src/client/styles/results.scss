@@ -1,0 +1,83 @@
+@import 'config';
+
+.results-section {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1.2em;
+
+    .block {
+        border-radius: 30px;
+        background: darken($base-color, 10%);
+        padding: 1em;
+    }
+
+    .article {
+        &-img {
+            width: 100%;
+        }
+
+        &-title {
+            font-weight: 700;
+            margin: 1em 0 0.3em;
+        }
+
+        &-info {
+            display: flex;
+            margin-bottom: 1em;
+            font-size: 1rem;
+        }
+
+        &-text {
+            margin-bottom: 1em;
+            font-size: 1rem;
+        }
+
+        &-link {
+            width: 100%;
+            padding: 1em 2em;
+            border-radius: 30px;
+            border: 1px solid $main-brand-color;
+            transition: .2s ease-out;
+
+            a {
+                text-decoration: none;
+                text-transform: uppercase;
+                font-size: 0.8rem;
+                color: $main-brand-color;
+                font-weight: 700;
+            }
+        }
+    }
+
+    .article-link:hover {
+        background: $secondary-brand-color;
+    }
+
+    .divider {
+        margin: 0 .3em;
+        font-weight: 700;
+    }
+
+    .data {
+        font-size: 1.1rem;
+        
+        &-value {
+            font-weight: 700;
+        }
+
+        p {
+            margin-bottom: .5em;
+        }
+    }
+
+    .title-block {
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        font-size: 1.2rem;
+        border: 2px solid $main-brand-color;
+        background: lighten($main-brand-color, 50%);
+        padding: .2em 0;
+        margin-bottom: .5em;
+    }
+}

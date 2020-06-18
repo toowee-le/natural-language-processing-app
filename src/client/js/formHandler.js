@@ -7,9 +7,8 @@ export function performNLP(event) {
         alert("Please enter a web address");
         return false;
     } else {
-        console.log('::: Form Submitted :::')
-        console.log(url);
         postRequest('http://localhost:8080/apiCall', { url })
+        .then(data => console.log(data));
     }
 }
 
@@ -25,7 +24,7 @@ export const postRequest = async (url = '', data = {}) => {
     })
     try {
         const data = await res.json();
-        console.log(data); 
+        return data;
     } catch(err) {
         console.log("Error:", err);
     }
