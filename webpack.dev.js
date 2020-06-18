@@ -21,6 +21,17 @@ module.exports = {
             {
                 test: /\.scss$/,
                 use: ['style-loader', 'css-loader', 'sass-loader']
+            },
+            {
+                test: /\.html$/i,
+                loader: 'html-loader',
+            },
+            {
+                test: /\.(png|jpe?g)$/i,
+                loader: 'file-loader',
+                options: {
+                    name: 'public/[name].[ext]'
+                }
             }
         ]
     },

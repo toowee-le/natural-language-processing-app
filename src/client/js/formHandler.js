@@ -8,7 +8,10 @@ export function performNLP(event) {
         return false;
     } else {
         postRequest('http://localhost:8080/apiCall', { url })
-        .then(data => console.log(data));
+        .then(data => {
+            updateUI(data);
+            console.log(data);
+        });
     }
 }
 
@@ -28,4 +31,8 @@ export const postRequest = async (url = '', data = {}) => {
     } catch(err) {
         console.log("Error:", err);
     }
+}
+
+const updateUI = () => {
+    const resultsSection = document.querySelector('.results-section');
 }
