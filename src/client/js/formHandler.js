@@ -1,5 +1,7 @@
 import { preloader } from "./preloader";
 
+const resultsSection = document.querySelector('.results-section');
+
 export function performNLP(event) {
     event.preventDefault();
 
@@ -16,6 +18,7 @@ export function performNLP(event) {
             preloader('hide');
             console.log(data);
         });
+        clearResults();
     }
 }
 
@@ -38,7 +41,6 @@ export const postRequest = async (url = '', data = {}) => {
 }
 
 const updateUI = (data) => {
-    const resultsSection = document.querySelector('.results-section');
 
     const innerHTML = `
         <div class="article block">
@@ -65,4 +67,8 @@ const updateUI = (data) => {
     `;
 
     resultsSection.innerHTML = innerHTML;
+}
+
+function clearResults() {
+    resultsSection.innerHTML = '';
 }
