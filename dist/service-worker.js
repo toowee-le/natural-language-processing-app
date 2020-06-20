@@ -114,7 +114,7 @@ define("./service-worker.js",['./workbox-64f1e998'], function (workbox) { 'use s
     "revision": "8bd59371db3e4c7d6ee57eabef4aba48"
   }, {
     "url": "main.js",
-    "revision": "8dedcbbf42a6a4660828550f66a33d06"
+    "revision": "4923e29d55c8ec5fa85ae1e0d74693f9"
   }, {
     "url": "src/client/assets/public/ai.jpg",
     "revision": "772a645ade217993fe745423e3c5a1ff"

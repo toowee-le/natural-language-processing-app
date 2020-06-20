@@ -131,7 +131,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) *
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"preloader\", function() { return preloader; });\nfunction preloader(hide = '') {\n    const loader = document.querySelector('.loader');\n\n    if (hide === 'show') {\n        loader.style.display = 'block';\n    } else {\n        loader.style.display = 'none';\n    }\n}\n\n//# sourceURL=webpack://Client/./src/client/js/preloader.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"preloader\", function() { return preloader; });\nfunction preloader(hide = '') {\n    const loader = document.querySelector('.loader');\n\n    hide === 'show' ? loader.style.display = 'block' : loader.style.display = 'none';\n}\n\n//# sourceURL=webpack://Client/./src/client/js/preloader.js?");
 
 /***/ }),
 
