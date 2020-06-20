@@ -27,7 +27,7 @@ module.exports = {
                 loader: 'html-loader',
             },
             {
-                test: /\.(png|jpe?g)$/i,
+                test: /\.(png|jpe?g|gif)$/i,
                 loader: 'file-loader',
                 options: {
                     name: 'public/[name].[ext]'
