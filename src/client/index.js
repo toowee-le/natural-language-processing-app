@@ -1,6 +1,6 @@
 import { performNLP } from './js/formHandler'
 import { preloader } from './js/preloader'
-import { checkForName } from './js/nameChecker'
+import { checkURL } from './js/urlChecker'
 
 import './styles/resets.scss'
 import './styles/base.scss'
@@ -12,5 +12,5 @@ import './styles/results.scss'
 export { 
     performNLP,
     preloader,
-    checkForName
+    checkURL
 }

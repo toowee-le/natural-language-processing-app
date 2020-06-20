@@ -1,4 +1,5 @@
 import { preloader } from "./preloader";
+import { checkURL } from "./urlChecker";
 
 const resultsSection = document.querySelector('.results-section');
 
@@ -8,19 +9,22 @@ export function performNLP(event) {
     // DOM elements needed
     let url = document.getElementById('url').value;
     if (url == "") {
-        alert("Please enter a web address");
+        alert("Please enter a URL");
         return false;
-    } else {
+    };
+
+    if (checkURL(url)) {
         preloader('show');
         postRequest('http://localhost:8000/apiCall', { url })
         .then(data => {
             updateUI(data);
             preloader('hide');
-            console.log(data);
         });
         clearResults();
-    }
-}
+    } else {
+        alert("Error: Please check the URL is a valid web address and ensure it starts with http:// or https://")
+    };
+};
 
 // POST request to the server with the submitted URL
 export const postRequest = async (url = '', data = {}) => {

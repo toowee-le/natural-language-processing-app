@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Natural Language Processing</title>
+    <link href="main.css" rel="stylesheet"></head>
+
+    <body>
+
+        <header>
+            <h1 class="site-title">Evaluate a News Article with NLP</h1>
+        </header>
+
+        <main>
+            <section class="intro-section">
+                <img src="./src/client/assets/public/ai.jpg" class="intro-img">
+
+                <div class="overlay-text">
+                    <p>Natural Language Processing (NLP) is a field of AI that gives computers the ability to read, understand and extract meaning from human languages. The Aylien Text Analysis API is a powerful NLP package for analysing various kinds of meaning from textual content. Try it below!</p>
+                </div>
+            </section>
+
+            <hr>
+
+            <section class="form-section">
+                <h2>Add a URL to a news article to see what insight The Aylien Text NLP has on the author's emotions and perspective:</h2>
+
+                <form onsubmit="return Client.performNLP(event)">
+                    <input type="text" name="input" placeholder="URL" id="url">
+                    <input type="submit" name="submit" value="Analyse Text" id="submit" onclick="return Client.performNLP(event)" onsubmit="return Client.performNLP(event)">
+                </form>
+
+                <div class="loader hide">
+                    <img src="./src/client/assets/public/loader.gif" alt="Loading...">
+                </div>
+            </section>
+
+            <section class="results-section"></section>
+        </main>
+
+        <footer>
+            <p>Read more about The Aylien Text Analysis NLP API <a href="https://aylien.com/" target="_blank">here</a>.</p>
+            <p>&copy; 2020 <a href="https://github.com/toowee-le" target="_blank">Tuyet Le</a></p>
+        </footer>
+
+        <!-- Register Service Workers-->
+        <!-- <script>
+            // Check that service workers are supported
+            if ('serviceWorker' in navigator) {
+                // Use the window load event to keep the page load performant
+                window.addEventListener('load', () => {
+                    navigator.serviceWorker.register('/service-worker.js');
+                });
+            }
+        </script> -->
+    <script src="main.js"></script></body>
+</html>
