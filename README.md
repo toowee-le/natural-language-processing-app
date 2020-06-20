@@ -4,8 +4,7 @@
 Udacity Front End Web Developer Nanodegree - Project 4</br>
 Technologies used: HTML, CSS, Sass, JavaScript, Node.js, Express, Webpack, Service Workers, Babel, Aylien API
 
-A web app that analyses news article to interpret the author's emotions and perspectives using NLP. The user can enter in a URL of any news article for the app to analyse. It uses two API endpoints from [The Aylien Text Analysis API](https://docs.aylien.com/textapi/#getting-started): Sentiment Analysis and Article Extraction.
-
+A web app that analyses news articles to interpret the author's emotions and perspectives using NLP. The user can enter in a URL of an article for the app to analyse. It uses two API endpoints from [The Aylien Text Analysis API](https://docs.aylien.com/textapi/#getting-started): Sentiment Analysis and Article Extraction.
 
 ## Demo
 ![Natural Language Processing App](demo.gif)
@@ -19,4 +18,3 @@ A web app that analyses news article to interpret the author's emotions and pers
 :heavy_check_mark: Two requests made to [The Aylien Text Analysis API](https://docs.aylien.com/textapi/#getting-started) from the local server</br>
 :heavy_check_mark: UI is updated with the API response</br>
 :heavy_check_mark: Content can be viewed offline with Service Workers</br>
-
