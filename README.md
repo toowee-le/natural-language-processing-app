@@ -1,4 +1,4 @@
-# Evaluate a News Article with Natural Language Processing (NLP) :newspaper::speaking_head:
+# Evaluate a News Article with Natural Language Processing (NLP) :speaking_head: :newspaper:
 
 ## About
 Udacity Front End Web Developer Nanodegree - Project 4</br>
