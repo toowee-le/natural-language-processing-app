@@ -37,3 +37,10 @@ header {
     }
 }
 
+@media (max-width: 790px) {
+    // Having trouble repositioning the overlay text for smaller screens
+    .overlay-text {
+        top: 0;
+        left: 0;
+    }
+}
