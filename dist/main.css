@@ -125,6 +125,17 @@ footer {
       transition: .2s ease; }
       .form-section form input[type=submit]:hover {
         background: #253d4a; }
+  .form-section .loader {
+    text-align: center;
+    margin-top: 2em;
+    display: none; }
+  .form-section .loader.hide {
+    animation: fadeOut;
+    animation-fill-mode: forwards; }
+
+@keyframes fadeOut {
+  100% {
+    opacity: 1; } }
 
 header {
   text-align: center;

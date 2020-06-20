@@ -108,16 +108,19 @@ define("./service-worker.js",['./workbox-64f1e998'], function (workbox) { 'use s
 
   workbox.precacheAndRoute([{
     "url": "./index.html",
-    "revision": "7c45e807407d3ace8fbc66f41e960718"
+    "revision": "604fa84b2bc377a2f6ba07a14db2ab56"
   }, {
     "url": "main.css",
-    "revision": "327fd2e230acaedcf7c4d6b592af1ffc"
+    "revision": "8bd59371db3e4c7d6ee57eabef4aba48"
   }, {
     "url": "main.js",
-    "revision": "d5b636c7bf7a62cf82c51baa730cd1dc"
+    "revision": "8dedcbbf42a6a4660828550f66a33d06"
   }, {
     "url": "src/client/assets/public/ai.jpg",
     "revision": "772a645ade217993fe745423e3c5a1ff"
+  }, {
+    "url": "src/client/assets/public/loader.gif",
+    "revision": "9bc21a0f7aee2a491f9acd48afb36c9b"
   }], {});
 
 });

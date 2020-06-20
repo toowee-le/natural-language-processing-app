@@ -34,4 +34,21 @@
             }
         }
     }
+
+    .loader {
+        text-align: center;
+        margin-top: 2em;
+        display: none;
+    }
+
+    .loader.hide {
+        animation: fadeOut;
+        animation-fill-mode: forwards;
+    }
+
+    @keyframes fadeOut {
+        100% {
+            opacity: 1;
+        }
+    }
 }

@@ -29,6 +29,10 @@
                     <input type="text" name="input" placeholder="URL" id="url">
                     <input type="submit" name="submit" value="Analyse Text" id="submit" onclick="return Client.performNLP(event)" onsubmit="return Client.performNLP(event)">
                 </form>
+
+                <div class="loader hide">
+                    <img src="../assets/loader.gif" alt="Loading...">
+                </div>
             </section>
 
             <section class="results-section"></section>
@@ -39,8 +43,8 @@
             <p>&copy; 2020 <a href="https://github.com/toowee-le" target="_blank">Tuyet Le</a></p>
         </footer>
 
-        <!-- Register Servier Workers-->
-        <script>
+        <!-- Register Service Workers-->
+        <!-- <script>
             // Check that service workers are supported
             if ('serviceWorker' in navigator) {
                 // Use the window load event to keep the page load performant
@@ -48,6 +52,6 @@
                     navigator.serviceWorker.register('/service-worker.js');
                 });
             }
-        </script>
+        </script> -->
     </body>
 </html>

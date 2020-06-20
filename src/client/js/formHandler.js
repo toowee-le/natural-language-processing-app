@@ -1,3 +1,5 @@
+import { preloader } from "./preloader";
+
 export function performNLP(event) {
     event.preventDefault();
 
@@ -7,9 +9,11 @@ export function performNLP(event) {
         alert("Please enter a web address");
         return false;
     } else {
-        postRequest('http://localhost:8080/apiCall', { url })
+        preloader('show');
+        postRequest('http://localhost:8000/apiCall', { url })
         .then(data => {
             updateUI(data);
+            preloader('hide');
             console.log(data);
         });
     }
