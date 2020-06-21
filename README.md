@@ -9,6 +9,8 @@ A web app that analyses news articles to interpret the author's emotions and per
 ## Demo
 ![Natural Language Processing App](demo.gif)
 
+[Live app deployed on Heroku here](https://news-article-nlp.herokuapp.com/)
+
 ## Features
 :heavy_check_mark: Express server set up</br>
 :heavy_check_mark: Webpack set up with two config files for development and production `npm run build-dev` and `npm run build-prod`</br>
