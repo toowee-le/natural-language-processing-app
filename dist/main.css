@@ -126,10 +126,12 @@ footer {
       border: 1px solid #36596c;
       color: #FFF;
       cursor: pointer;
-      transition: .2s ease; }
+      transition: .2s ease;
+      -webkit-appearance: none; }
       .form-section form input[type=submit]:hover {
         background: #253d4a;
-        border: 1px solid #253d4a; }
+        border: 1px solid #253d4a;
+        -webkit-appearance: none; }
   .form-section .loader {
     text-align: center;
     margin-top: 2em;

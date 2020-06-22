@@ -34,10 +34,12 @@
             color: $base-color;
             cursor: pointer;
             transition: .2s ease;
+            -webkit-appearance: none;
     
             &:hover {
                 background: $main-brand-color;
                 border: 1px solid $main-brand-color;
+                -webkit-appearance: none;
             }
         }
     }
