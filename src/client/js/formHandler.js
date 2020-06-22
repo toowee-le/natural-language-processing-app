@@ -15,7 +15,7 @@ export function performNLP(event) {
 
     if (checkURL(url)) {
         preloader('show');
-        postRequest('/apiCall', { url })
+        postRequest('http://localhost:8000/apiCall', { url })
         .then(data => {
             updateUI(data);
             preloader('hide');
