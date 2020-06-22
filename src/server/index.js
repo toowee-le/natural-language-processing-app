@@ -67,5 +67,5 @@ app.post('/apiCall', (req, res) => {
 });
 
 // Start the server
-const port = process.env.PORT || 8000;
+const port = process.env.PORT || 5000;
 app.listen(port, () => { console.log(`App listening on localhost: ${port}!`) });
