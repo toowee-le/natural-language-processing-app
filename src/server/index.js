@@ -68,4 +68,4 @@ app.post('/apiCall', (req, res) => {
 
 // Start the server
 const port = process.env.PORT || 5000;
-app.listen(port, () => { console.log(`App listening on localhost: ${port}!`) });
+app.listen(port, () => { console.log(`App is running on port ${port}.`) });
