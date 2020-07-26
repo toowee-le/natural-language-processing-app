@@ -10,4 +10,4 @@
 * [x] Minify js and styles in the production environment
 * [x] Response from the API must be added to the view for a user to see
 * [x] Be able to show content offline
-* [ ] Deploy the project on either Netlify or Heroku
+* [x] Deploy the project on either Netlify or Heroku
