@@ -3,13 +3,9 @@
  * Require packages
  */
 
-var path = require('path');
 const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
-const AYLIENTextAPI = require('aylien_textapi');
-const dotenv = require('dotenv');
-      dotenv.config();
 
 const app = express();
 
@@ -20,8 +16,12 @@ app.use(cors());
 app.use(express.static("dist"));
 
 app.get('/', function (req, res) {
-    res.sendFile('dist/index.html')
+    res.sendFile('dist/index.html');
 });
+
+const AYLIENTextAPI = require('aylien_textapi');
+const dotenv = require('dotenv');
+      dotenv.config();
 
 var nlp = new AYLIENTextAPI({
     application_id: process.env.API_ID,
@@ -29,7 +29,7 @@ var nlp = new AYLIENTextAPI({
 });
 
 app.post('/apiCall', (req, res) => {
-    // Create an object to store all API data to use on the client
+    // Create an empty object to store API data to use on the client
     const allData = {};
     allData.url = req.body.url;
 
@@ -57,12 +57,11 @@ app.post('/apiCall', (req, res) => {
                         allData.subjectivity = response.subjectivity.charAt(0).toUpperCase() + response.subjectivity.slice(1);
                         allData.polarityConfidence = response.polarity_confidence.toFixed(1);
                         allData.subjectivityConfidence = response.subjectivity_confidence.toFixed(1);
-                        console.log(allData);
                         res.send(allData);
-                    }
-                })
-            }
-        }
+                    };
+                });
+            };
+        };
     });
 });
 
