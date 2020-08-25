@@ -1,9 +1,9 @@
-# Evaluate a News Article with Natural Language Processing (NLP) :speaking_head: :newspaper:
+# Evaluate a News Article with Natural Language Processing :speaking_head: :newspaper:
 
 ## Description
 Training project for [Udacity Front End Web Developer Nanodegree](https://www.udacity.com/course/front-end-web-developer-nanodegree--nd0011) - Project 4</br>
 
-This is a web tool that uses Natural Language Procesing to analyse the author's emotions in news articles or blog posts. The tool allows users to enter ih the URL of an article which will return data on whether the article is subjective or objective, as well as whether the author's tone is positive, neutral or negative. It uses two API endpoints from [The Aylien Text Analysis API](https://docs.aylien.com/textapi/#getting-started): Sentiment Analysis and Article Extraction.
+This is a web tool that uses Natural Language Procesing to analyse the author's emotions in news articles and blog posts. The tool allows users to enter in the URL of an article, which will return data on whether the article is subjective or objective, as well as how positive, neutral or negative the author's tone is. The project uses two API endpoints from [The Aylien Text Analysis API](https://docs.aylien.com/textapi/#getting-started): Sentiment Analysis and Article Extraction.
 
 Technologies used: HTML, CSS, Sass, JavaScript, Node.js, Express, Webpack, Service Workers, Babel, Aylien API
 
@@ -23,4 +23,4 @@ Technologies used: HTML, CSS, Sass, JavaScript, Node.js, Express, Webpack, Servi
 :heavy_check_mark: Content can be viewed offline with Service Workers</br>
 
 ## Copyright
-This project is based on the [Udacity FEND repository](https://github.com/udacity/fend/tree/refresh-2019)
+This project is based on the [Udacity FEND Nanodegree repository](https://github.com/udacity/fend/tree/refresh-2019)
